@@ -1,0 +1,39 @@
+#gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    width: 400px;
+    height: 400px;
+}
+.gridCell{
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.gridCell:hover{
+    background-color: black;
+}
+#randomColor, #clearGrid{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+#randomColor {
+    background-color: #4CAF50;
+}
+#clearGrid{
+    background-color: blue;
+}
+#title{
+    font-size: 3em;           /* Large font size */
+    color: white;             /* Text color */
+    background-color: #4A90E2; /* Background color */
+    text-align: center;       /* Center align the title */
+    padding: 20px;  
+}
