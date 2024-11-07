@@ -1,4 +1,5 @@
 import { getWeatherImg,getWeatherWind } from './helper2'
+import { format } from "date-fns"
 export function displayToday(data){
 
     const icon=getWeatherImg(data.currentConditions.icon)
@@ -51,7 +52,7 @@ export function displayToday(data){
                 const li = document.createElement('li');
                 li.classList.add('day');
                 const icon = getWeatherImg(data.days[i].icon);
-                li.innerHTML = `<p> Hi</p>`
+                li.innerHTML = `${format(data.days[i].datetime.replace(/-/g, '/'), 'ccc')}  <figure class="icon-week-forecast"><img src="${icon}" alt="${data.days[i].icon}" class="icon-week"></figure> <div class="temp-range"><span class="temp">${data.days[i].tempmin}</span><span class="temp-unit">°F</span> - <span class="temp">${data.days[i].tempmax}</span><span class="temp-unit">°F</span></div>`;
                 ul.append(li);
                 console.log(data.days[i].datetime);
             }
