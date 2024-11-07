@@ -1,0 +1,46 @@
+.todays-forecast{
+
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+li {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 5fr;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #98afc3;
+
+}
+.week-forecast {
+    width: min(450px, 80%);
+}
+
+.forecast {
+    width: 80vw;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+body{
+    background-color: aliceblue;
+}
+
+.today-top,
+.today-mid,.today-end
+{
+
+    background-color: #6587a4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: min(450px, 100%);
+
+    padding: 1rem;
+}
