@@ -44,3 +44,6 @@ body{
 
     padding: 1rem;
 }
+.hide {
+    display: none;
+}

@@ -2,7 +2,7 @@ import './styles.css'
 
 import { display7DayForecast, displayToday } from "./helper"
 import { convertTemp,convertTemp2 } from './temp_unit'
-
+document.addEventListener("DOMContentLoaded", () => {
 const searchBtn=document.querySelector('.search')
 const unitConvBtn = document.querySelector('.unit-conv');
 console.log('hi')
@@ -12,6 +12,14 @@ searchBtn.addEventListener('click', () => {
     const url=`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city.value}?unitGroup=us&key=BXBWRF5A48GFFV2N7ZKHW36RY&contentType=json`
     console.log(city.value)
     getWeatherData(url)
+
+})
+
+unitConvBtn.addEventListener('click', () => {  
+    convertTemp();
+    convertTemp2();
+
+});
 
 })
 
@@ -29,9 +37,4 @@ const response=await fetch(url)
     
 }
 
-unitConvBtn.addEventListener('click', () => {  
-    convertTemp();
-    convertTemp2();
-    //convertDistance();
-    //convertDistanceUnit();
-});
+
