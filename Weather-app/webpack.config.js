@@ -1,17 +1,18 @@
-// webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "main.js",
+    filename: "main.js", // No hash for consistency in dev mode
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  mode: "development",
   devtool: "eval-source-map",
   devServer: {
+    static: "./dist",
+    port: 8080,
     watchFiles: ["./src/template.html"],
   },
   plugins: [
@@ -19,11 +20,6 @@ module.exports = {
       template: "./src/template.html",
     }),
   ],
-  mode: 'development',
-    devServer: {
-        static: './dist',
-        port: 8080
-    },
   module: {
     rules: [
       {
