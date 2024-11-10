@@ -1,0 +1,146 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.preview-section {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  height: 200vh;
+}
+
+.a4-preview {
+  padding: 0;
+}
+
+.a4-preview h3 {
+  color: black;
+  text-align: left;
+  margin-bottom: 0px;
+  font-size: 1.1rem;
+  padding: 0;
+}
+
+.lines p {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.a4-preview p {
+  margin: 1px 0;
+  font-size: 0.9rem;
+}
+
+.education-details {
+  display: flex; /* Ensures items are placed in a row */
+  justify-content: space-between; /* Spread the elements between the left and right */
+  align-items: flex-start; /* Align all elements at the top */
+  gap: 10px;
+  width: 100%; /* Ensures the items stretch to full width */
+}
+
+.edu-left {
+  text-align: left; /* Left-aligned job title and company */
+  flex: 1; /* Allow this part to take up available space */
+}
+
+.edu-left em {
+  font-style: italic;
+}
+
+.edu-right {
+  text-align: right; /* Right-aligned Year */
+  flex: 0 0 auto; /* Prevent this section from growing */
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.description-container {
+  text-align: left; /* Left-aligned content */
+  margin-top: 10px;
+  width: 100%; /* Ensures it takes up full width */
+}
+
+.description-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.description-container p {
+  margin-top: 10px;
+  text-align: center; /* Centers the Description: title */
+}
