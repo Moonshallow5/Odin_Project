@@ -5,7 +5,7 @@ function WorkExperiencePreview({workExperience}){
 
         <div className="preview-section">
         <div className="a4-preview">
-          <h3>Work-Experience</h3>
+          <h3>Work-Experienceee</h3>
           <div className="lines">
             <p>------------------------------------------------------------------</p>
           </div>
