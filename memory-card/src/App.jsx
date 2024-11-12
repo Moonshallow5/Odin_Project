@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import './App.css'
-import { FetchData } from './api'
+import { FetchData } from './API'
 import Card from './Component/Card'
 
 function App() {
