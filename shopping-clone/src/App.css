@@ -1,0 +1,76 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+nav {
+  position: fixed; /* Keeps the navbar fixed at the top of the page */
+  top: 0; /* Aligns the navbar to the top */
+  left: 0; /* Ensures it starts at the left edge */
+  width: 100%; /* Makes the navbar span the full width of the page */
+  display: flex; /* Uses flexbox for alignment */
+  justify-content: center; /* Centers the links horizontally */
+  align-items: center; /* Aligns the content vertically */
+  background: #333; /* Sets the background color */
+  color: white; /* Sets the text color */
+  padding: 10px 0; /* Adds some spacing inside the navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a slight shadow for better visibility */
+}
+
+nav div {
+  display: flex; /* Flexbox for the link container */
+  gap: 20px; /* Adds spacing between the links */
+}
+
+nav a {
+  text-decoration: none; /* Removes the underline from links */
+  color: white; /* Makes the links white */
+  font-size: 18px; /* Adjusts the font size */
+  transition: color 0.3s; /* Adds a hover transition effect */
+}
+
+nav a:hover {
+  color: #f0a500; /* Changes color on hover */
+}
+img{
+
+  padding-bottom: 30px;
+}
