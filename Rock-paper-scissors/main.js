@@ -18,16 +18,7 @@ function getComputerChoice() {
         return "paper"
     }
 }
-function getHumanChoice(){
-    y=prompt('Enter rock, paper or scissors').toLowerCase()
-    if(y=='rock' || y=='paper' || y=='scissors'){
-        return y
-    }
-    else{
-        console.log("Please enter the right word")
-    }
 
-}
 
 function playRound(human,compu) {
     const roundResult=document.getElementById('roundResult')
@@ -74,18 +65,4 @@ function endGame() {
     
 }
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(),getComputerChoice())
-    }
-    if(humancount>compcount){
-        console.log(`Human wins ${humancount} to ${compcount}`)
-    }else if(compcount>humancount){
-        console.log(`Computer wins ${compcount} to ${humancount}`)
-    }
-    else{
-        console.log(`It's a tie with score of ${humancount} `)
-    }
-    
-}
 
