@@ -1,6 +1,10 @@
 
 humancount=0
 compcount=0
+count_tot=0
+document.getElementById('rock').addEventListener('click', () => playRound('rock', getComputerChoice()));
+document.getElementById('paper').addEventListener('click',()=> playRound(('paper'),getComputerChoice()))
+document.getElementById('scissors').addEventListener('click',()=> playRound(('scissors'),getComputerChoice()))
 function getComputerChoice() {
     const x=Math.random()*3
     console.log(x)
@@ -26,27 +30,53 @@ function getHumanChoice(){
 }
 
 function playRound(human,compu) {
+    const roundResult=document.getElementById('roundResult')
+    const score=document.getElementById('score')
+
 
     if((human=='rock' && compu=='scissors') || (human=='scissors' && compu=='paper') || (human=='paper' && compu=='rock')){
         humancount+=1
-        console.log(`Human wins, ${human} beats ${compu}`)
+        roundResult.textContent=`Human wins, ${human} beats ${compu}`
 
     }
     else if(human==compu){
-        console.log(`Both chose ${human}`)
-        return
+        roundResult.textContent=`Both chose ${human}`
+        
     }
     else{
         compcount+=1
-        console.log(`Computer wins, ${compu} beats ${human}`)
+        roundResult.textContent=`Computer wins, ${compu} beats ${human}`
     }
+    score.textContent = `Score: Human ${humancount} - Computer ${compcount}`;
+    count_tot+=1
+    console.log(`Count total is ${count_tot}`)
+    if (count_tot=== 5) {
+        endGame();
+    }
+    
+}
+function endGame() {
+    if(compcount>humancount){
+        gameResult.textContent = `Computer wins the game ${compcount} to ${humancount}.`
+
+    }else if(humancount>compcount){
+        gameResult.textContent=` Human wins the game ${humancount} to ${compcount}`
+    }
+    else{
+        gameResult.textContent=`It's a tie ${humancount} to ${compcount}`
+    }
+
+    // Disable buttons after the game is over
+    document.getElementById('rock').disabled = true;
+    document.getElementById('paper').disabled = true;
+    document.getElementById('scissors').disabled = true;
+
     
 }
 
 function playGame() {
     for (let i = 0; i < 5; i++) {
         playRound(getHumanChoice(),getComputerChoice())
-        
     }
     if(humancount>compcount){
         console.log(`Human wins ${humancount} to ${compcount}`)
@@ -58,5 +88,4 @@ function playGame() {
     }
     
 }
-playGame()
 
