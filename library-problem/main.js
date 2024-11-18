@@ -1,14 +1,16 @@
 
 const myLibrary=[]
-function Book(title,author,page){
+class Book {
+    constructor(title, author, page) {
 
-    this.title=title
-    this.author=author
-    this.page=page
-    
-    this.toggleRead = function () {
-        this.read = !this.read;
-      }
+        this.title = title
+        this.author = author
+        this.page = page
+
+        this.toggleRead = function () {
+            this.read = !this.read
+        }
+    }
 }
 
 function addBookToLibrary(book) {
